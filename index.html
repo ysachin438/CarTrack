@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarTrack - Lead Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/10380505.png" type="image/x-icon">
+    
+</head>
+<body>
+    <header>
+        <h1>CarTrack - Lead Management Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#lead-listing">Lead Listing</a></li>
+                <li><a href="#lead-details">Lead Details</a></li>
+                <li><a href="/lead-management/lead-management.html">Lead Management</a></li>
+                <li><a href="./Dashboard/dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Lead Listing Screen -->
+        <section id="lead-listing" class="screen">
+            <h2>Lead Listing</h2>
+            <table id="leadTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Source</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic data goes here -->
+                </tbody>
+            </table>
+            <button onclick="addLead()">Add New Lead</button>
+        </section>
+
+        <!-- Lead Details Screen -->
+        <section id="lead-details" class="screen">
+            <h2>Lead Details</h2>
+            <div id="leadInfo">
+                <p><strong>Name:</strong> <span id="leadName">John Doe</span></p>
+                <p><strong>Status:</strong> <span id="leadStatus">New</span></p>
+                <p><strong>Source:</strong> <span id="leadSource">Website</span></p>
+            </div>
+            <button onclick="updateLead()">Update Lead</button>
+        </section>
+
+        <!-- Lead Management Screen -->
+        <section id="lead-management" class="screen">
+            <h2>Lead Management</h2>
+            <label for="bulkAction">Bulk Actions:</label>
+            <select id="bulkAction">
+                <option value="contacted">Mark as Contacted</option>
+                <option value="not-interested">Mark as Not Interested</option>
+            </select>
+            <button onclick="applyBulkAction()">Apply</button>
+        </section>
+
+        <!-- Dashboard Screen -->
+        <section id="dashboard" class="screen">
+            <h2>Dashboard</h2>
+            <div id="stats">
+                <p>Total Leads: <span id="totalLeads">10</span></p>
+                <p>Contacted Leads: <span id="contactedLeads">3</span></p>
+                <p>Not Interested Leads: <span id="notInterestedLeads">2</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

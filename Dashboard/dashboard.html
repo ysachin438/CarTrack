@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarTrack - Lead Management Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" href="/images/10380505.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <h1>CarTrack - Business Lead Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="screen">
+            <h2>Lead Management Dashboard</h2>
+            
+            <!-- Filters Section -->
+            <div class="filter-container">
+                <label for="statusFilter">Filter by Status:</label>
+                <select id="statusFilter">
+                    <option value="all">All</option>
+                    <option value="New">New</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Not Interested">Not Interested</option>
+                </select>
+
+                <label for="sourceFilter">Filter by Source:</label>
+                <select id="sourceFilter">
+                    <option value="all">All</option>
+                    <option value="Website">Website</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Google">Google</option>
+                    <option value="Offline">Offline</option>
+                </select>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Total Leads</h3>
+                    <p id="totalLeads">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Contacted Leads</h3>
+                    <p id="contactedLeads">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Not Interested Leads</h3>
+                    <p id="notInterestedLeads">0</p>
+                </div>
+            </div>
+            
+            <!-- Chart Section -->
+            <div class="chart-container">
+                <canvas id="leadChart"></canvas>
+            </div>
+
+            <!-- Real-Time Collaboration Status -->
+            <div class="collaboration-status">
+                <h3>Collaboration Status</h3>
+                <p id="collabStatus">Real-time updates enabled.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
